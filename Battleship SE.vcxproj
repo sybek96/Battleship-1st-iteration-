@@ -120,16 +120,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Accessory.cpp" />
+    <ClCompile Include="AI.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Part.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="Square.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Accessory.h" />
+    <ClInclude Include="AI.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Part.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Square.h" />

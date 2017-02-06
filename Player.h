@@ -17,7 +17,6 @@ public:
 	bool attackEnemy();
 	void addTurn();
 	void addScore();
-
 private:
 	int m_turns;
 	int m_score;

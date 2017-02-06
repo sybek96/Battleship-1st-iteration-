@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include "Part.h"
+#include "Accessory.h"
 //ship class
 
 class Ship
@@ -30,5 +33,7 @@ private:
 	Colour m_colour = Colour::BLUE;
 	bool m_destroyed;
 	int m_id;
+	std::vector<Part> m_parts;
+	std::vector<Accessory> m_accessories;
 };
 

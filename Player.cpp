@@ -102,3 +102,4 @@ void Player::addScore()
 {
 	m_score += 100;
 }
+

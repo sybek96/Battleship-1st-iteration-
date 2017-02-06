@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Board.h"
 #include "Player.h"
+#include "AI.h"
 
 /// <summary>
 /// The controller class that controls the game.
@@ -71,6 +72,9 @@ private:
 	//select a random square
 	void selectRandomSquare();
 
+	//randomly assign ai ships to board
+	void randomiseAIShips();
+
 	/******************   MEMBER VARIABLES    *****************/
 
 	//the game render window
@@ -85,6 +89,9 @@ private:
 
 	//the board
 	std::unique_ptr<Board> m_board;
+
+	//The ai
+	std::unique_ptr<AI> m_ai;
 };
 
 #endif // !_GAME

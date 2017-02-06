@@ -10,6 +10,10 @@ Ship::Ship(int size, int row, int col, int id)
 	, m_destroyed(false)
 	, m_id(id)
 {
+	for (int i = 0; i < m_size; i++) //create parts equal size of ship
+	{
+		m_parts.push_back(Part());
+	}
 }
 
 //destructor
@@ -26,8 +30,14 @@ void Ship::changeColour(Colour c)
 	m_colour = c;
 }
 
+/// <summary>
+/// Assign a new accessory for the ship
+/// current iteration does not take into account different accessories
+/// or stacking of accessories
+/// </summary>
 void Ship::assignAccessory()
 {
+	m_accessories.push_back(Accessory());
 }
 
 /// <summary>
@@ -56,8 +66,14 @@ void Ship::randomColour()
 	}
 }
 
+/// <summary>
+/// This method would normally have a number that 
+/// randomly assigns an accessory from enum
+/// works just like random colour method
+/// </summary>
 void Ship::randomAccessory()
 {
+	//assign random accessory
 }
 
 /// <summary>

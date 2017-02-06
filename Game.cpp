@@ -17,6 +17,7 @@ Game::Game()
 	: m_window(sf::VideoMode(800u, 600u, 32u), "Battleship", sf::Style::Default)
 	, m_player(new Player())
 	, m_board(new Board(10))
+	, m_ai(new AI())
 {
 	srand(time(NULL)); //for random seed
 }
@@ -184,6 +185,14 @@ void Game::selectSquare(Square sq)
 void Game::selectRandomSquare()
 {
 	m_board->selectRandomSquare();
+}
+
+void Game::randomiseAIShips()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		m_board->placeShip(m_ai->getShips().at(i));
+	}
 }
 
 /// <summary>
